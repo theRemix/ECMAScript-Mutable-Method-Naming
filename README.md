@@ -20,7 +20,7 @@ This repo also includes some code samples of it's usage.
 
 Lets methods that mutate the owner/context be easily readable.
 
-```
+```js
 let existingUser = User.findByUsername("jon");
 console.log( existingUser.roles ); // Set { }
 
@@ -32,7 +32,7 @@ console.log( existingUser.roles ); // Set { Symbol(ADMIN) }
 
 Lets methods that create side effects be easily readable.
 
-```
+```js
 let jon = new User({ username : 'jon', password : 'hunter2' });
 jon.saveΔ();
 ```
@@ -42,7 +42,7 @@ _- Uncle Bob_
 
 In this case, (and maybe all cases), a side effect does not have to occur
 
-```
+```js
 // mutates, without other side effects
 datastore.add$( jon );
 ```
